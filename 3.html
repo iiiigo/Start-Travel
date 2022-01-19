@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>自強號</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" >
+        
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#!">Start Travel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="4.html">about</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+        
+        <!-- Header - set the background image for the header in the line below-->
+        <header class="py-5 bg-image-full" style="background-image: url('https://a-static.besthdwallpaper.com/yun-he-huo-che-qiangzhi-tw-1600x900-349_47.jpg')">
+            <div class="text-center my-5">
+                <img class="img-fluid rounded-circle mb-4" src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg" alt="..." />
+                <hr><h1 class="text-white fs-3 fw-bolder"><b>自強號</b></h1>
+                <p class="text-white mb-0"><b>T.C. Ltd Exp / Tze-Chiang Limited Express</b></p>
+            </div>
+        </header>
+        <!-- Content section-->
+        <section class="py-5">
+
+        
+        
+         <p align="center">
+            
+            <a href='3.html'><img src="https://pic.pimg.tw/hungbear1984/1409759544-2925627117.jpg"width=25%></a>
+            <a href='1.html'><img src="https://pic.pimg.tw/kimoriwillie/4aafb8fd302a8.jpg"width=10%></a>
+            <a href='2.html'><img src="https://cdn2.ettoday.net/images/4512/4512950.jpg"width=10%></a>
+            
+            
+         </p> 
+         <div class="container1">
+                     
+            <div class="item-right">
+                <table width="400px">
+                <tr >
+                <td align="right"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmBwznBlK4gLk5htaSzCSpYOAaN3qCNvOKRg&usqp=CAU"width=70%px></td>
+                </tr>
+                <p></p>
+                <tr >
+                <td align="right"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8-YcSEKqlVHDovWcAca2vMPxJ97dNzC6ZVA&usqp=CAU"width="70%px"></td>
+                </tr>
+                
+                </table>
+            </div>
+            <div class="item-center">
+             
+             <p class="lead"><h4>停靠站</h4>
+                往南
+                <dl>
+                    
+                    <dt><ul></dt>
+                
+                    <dd>
+                    
+                    <li>新左營newZuoying</li>
+                    
+                    <li>高雄 Kaohsiung</li>
+                   
+                    <li>鳳山 Fongshan</li>
+                    
+                    <li>九曲堂 Jiuqutang</li>
+                   
+                    <dt><ul> </dt>
+                    
+                    </dd>
+                 </ul></dt>
+                </dl></p>
+             </div>
+             
+             <div class="item-right">
+                 <h4>計算票價</h4>
+             <p class="mb-0"><form name="StartStation"onload="reset()">
+                
+                起始站: 
+                <select name="Area" onChange="renew(0,this.selectedIndex);">
+                    <option value="高雄地區">高雄地區</option>
+                </select>
+                <select name="Location">
+                    
+                    <option value="新左營">新左營</option>
+                    
+                    <option value="高雄">高雄</option>
+                    <option value="鳳山">鳳山</option>
+                
+                <option value="九曲堂">九曲堂</option>
+                    
+                </select>
+             </form><p></p>
+             <form name="EndStation">
+                終點站:
+             <select name="Area" onChange="renew(1,this.selectedIndex);">
+                <option value="高雄地區">高雄地區</option>
+             </select>
+            <select name="Location">
+                <option value="新左營">新左營</option>
+                
+                <option value="高雄">高雄</option>
+                
+                <option value="鳳山">鳳山</option>
+                
+                <option value="九曲堂">九曲堂</option>
+                
+                
+             </select>
+             </form>
+             <form id="viewmore"name="viewmore" style='display:none;'>
+            
+             <input type="radio" name="timetype" value=1 checked>出發
+             <input type="radio" name="timetype" value=2>到達<p>
+             
+             </form>
+             <br>
+             <input type="button" value="計算票價" onclick="count()">
+             <table  style="width:90px height=100px">
+                <thead>
+                  <tr>
+                    <th>車種</th>
+                    <th>票價</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="success">
+                    <td>區間車:</td>
+                <td><span id="區間車">0</span>元<br></td>
+                  </tr>
+                  <tr class="danger">
+                    <td>莒光號:</td>
+                <td><span id="莒光號">0</span>元<br></td>
+                  </tr>
+                  <tr class="info">
+                    <td>自強號:</td>
+                <td><span id="自強號">0</span>元<br></td>
+                  </tr>
+                  <tr class="warning">
+                    <td>區間電子:</td>
+                <td><span id="區間電子">0</span>元<br></td>
+                  </tr>
+                  <tr class="active">
+                    <td>自強電子:</td>
+                <td><span id="自強電子">0</span>元<br></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+           
+        
+
+
+        </section>
+        
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Xìngfú &copy; MY Website 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        
+    </body>
+</html>
